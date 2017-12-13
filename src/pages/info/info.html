@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{album.albumName}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="updateAlbum(album)">
+        <ion-icon name="ios-brush-outline"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="delete(album.id)">
+        <ion-icon name="ios-trash-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="{{album.cover}}" style="width: 100%;">
+      </ion-col>
+
+      <ion-col style="padding: 25px; display: flex; justify-content: center; text-align: center; flex-direction: column">
+        <h1>{{album.albumArtist}}</h1>
+        <h3>{{album.albumName}} ~ The Editor Notes</h3>
+        <p>{{album.albumDesc}}</p>
+      </ion-col>
+
+      <ion-col>
+        <img src="{{album.reverse}}" style="width: 100%">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
